@@ -1,0 +1,27 @@
+.status {
+  width: 10px;
+  height: 10px;
+  background-color: coral;
+  display: block;
+  margin: 8px 10px 0 0;
+  float: left;
+  border-radius: 50%;
+
+  &.checked-in {
+    background-color: chartreuse;
+  }
+  //h4 {
+  //  width: 200px;
+  //  height: 200px;
+  //  background-image: url('/src/assets/pics/b.png');
+  //}
+  #bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
+}

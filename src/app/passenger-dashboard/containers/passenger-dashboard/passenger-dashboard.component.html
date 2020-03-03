@@ -1,0 +1,32 @@
+<h4>
+  <!--      <img src="assets/pics/b.png"/>-->
+  <!--  <img id="bg" src="src/assets/pics/b.png">-->
+  <img [src]="logo" style="width: 100px;height: 100px">
+  <div class="container col-md-10" >
+
+    <div *ngFor="let passenger of passengers">{{passenger.fullName}}</div>
+
+    <div class="app">
+      <app-passenger-count
+        [items]="passengers">
+      </app-passenger-count>
+
+      <br>
+
+      <app-passenger-detail
+        *ngFor="let passenger of passengers"
+        [detail]="passenger"
+        (edit)="handleEdit($event);"
+        (remove)="handleRemove($event)"
+      >
+      </app-passenger-detail>
+      <ul>
+        <!--    <li *ngFor="let passenger of passengers; let i=index">-->
+        <!--     -->
+        <!--    </li>-->
+      </ul>
+    </div>
+  </div>
+
+
+</h4>

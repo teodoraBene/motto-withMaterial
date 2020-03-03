@@ -1,0 +1,22 @@
+<div class="app">
+  <ul>
+    <li *ngFor="let passenger of passengers; let i=index">
+      <span
+        class="status"
+        [ngClass]="{'checked-in': passenger.checkedIn}"></span>
+      {{i + 1.}}  Full Name:  {{passenger.fullName}}
+      <p> {{passenger | json}} //json pipe for debbuging</p>
+      <div class="date">
+        Check in date: {{ passenger.checkInDate ? (passenger.checkInDate |date) : 'not checked in'}}
+      </div>
+      <br>
+      <div *ngIf="passenger.children?.length">
+       <b>Children:</b> {{passenger.children.length}}
+        <div class="child" *ngFor=" let child of passenger.children">
+          {{child.name}}
+        </div>
+      </div>
+      <br>
+    </li>
+  </ul>
+</div>
